@@ -42,9 +42,9 @@ class Classificator:
             probability = np.amax(pred)
             if probability > 0.7:
                 max_ix = str(int(np.argmax(pred, 1)))
-                json_output = {"output_class": max_ix, "probability": float(probability)}
-                json_out = json.dumps(json_output)
-                return json_out#max_ix#output_class #json_out
+                #json_output = {"output_class": max_ix, "probability": float(probability)}
+                #json_out = json.dumps(json_output)
+                return max_ix#json_out#max_ix#output_class #json_out
             else:
                 return "default"
         else:
